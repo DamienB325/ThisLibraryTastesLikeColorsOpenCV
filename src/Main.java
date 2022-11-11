@@ -46,11 +46,6 @@ public class Main {
             System.out.println("No Camera Detected.");
             System.exit(1);
         }
-        // Read Camera Resolution
-//        Mat testMat = new Mat();
-//        capture.read(testMat);
-//        int camWidth = testMat.width();
-//        int camHeight = testMat.height();
         int camWidth = 1280;
         int camHeight = 720;
         int gridX = 16;
@@ -103,6 +98,7 @@ public class Main {
 //                MyLine(src,point1,point2);
 //            }
             // Create Masked Images
+            
             Core.inRange(srcHSV, new Scalar(0, 100, 100), new Scalar(10, 255, 255), srcRed);
             Core.inRange(srcHSV, new Scalar(10, 100, 100), new Scalar(40, 255, 255), srcBlue);
             Core.inRange(srcHSV, new Scalar(30, 80, 80), new Scalar(80, 255, 255), srcGreen);
